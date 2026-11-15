@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="referrer" content="no-referrer" />
+<meta name="theme-color" content="#0c1427" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="ONEGO" />
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icon-192.png" />
+<meta name="description" content="ONEGO ist deine kostenlose App für Lebenslauf, Bewerbung, Budget, Rechnungen und Alltag. Ohne Anmeldung, direkt im Browser.">
+<title>ONEGO 4.0 – Bewerbung, Budget & Premium</title>
+<style>
+:root{color-scheme:dark;--bg:#081020;--bg2:#0b162b;--panel:#111f36;--panel2:#172844;--border:rgba(189,214,255,.13);--text:#f3f7ff;--muted:#a2b3cd;--accent:#78efbe;--accent2:#5dc6ff;--red:#ff9a9b;--gold:#ffc980;--radius:22px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse 100% 30% at 80% -6%,#204b65 0%,transparent 65%),radial-gradient(ellipse 80% 45% at -25% 30%,#142b4b 0%,transparent 65%),var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;min-height:100vh;padding-bottom:105px}button,input,select,textarea{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--accent2);outline-offset:2px}header{max-width:1050px;margin:auto;padding:25px 22px 11px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:11px;font-weight:850;letter-spacing:1px;font-size:23px}.logo{width:40px;height:40px;border-radius:13px;background:linear-gradient(130deg,var(--accent),var(--accent2));display:grid;place-items:center;color:#061724;font-size:20px;font-weight:900;box-shadow:0 7px 26px #57eab02e}.tag{border:1px solid var(--border);border-radius:99px;padding:7px 10px;font-size:11px;font-weight:750;color:var(--accent);letter-spacing:.5px;background:#152b32}.shell{max-width:1050px;margin:auto;padding:0 22px}.hero{padding:28px 0 22px}.eyebrow{font-size:12px;color:var(--accent);letter-spacing:2.4px;text-transform:uppercase;font-weight:800}.hero h1{margin:12px 0 10px;font-size:clamp(32px,7vw,57px);line-height:1.07;letter-spacing:-1.7px;max-width:720px}.hero p{max-width:620px;color:var(--muted);line-height:1.6;margin:0}.hero h1 span{color:var(--accent)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.card,.panel{border:1px solid var(--border);background:linear-gradient(155deg,rgba(24,44,72,.85),rgba(13,26,46,.96));border-radius:var(--radius);box-shadow:0 10px 40px #0000001c}.card{padding:21px;text-align:left;color:var(--text);min-height:158px;transition:transform .15s,background .15s}.card:hover{transform:translateY(-2px);background:#1a3051}.card .icon{font-size:28px;margin-bottom:15px}.card strong{font-size:19px;display:block;margin-bottom:6px}.card small{color:var(--muted);line-height:1.5;display:block}.section{display:none;animation:appear .2s ease}.section.active{display:block}@keyframes appear{from{opacity:.45;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}.topline{display:flex;align-items:flex-start;gap:12px;justify-content:space-between;flex-wrap:wrap;margin:14px 0 20px}.topline h2{font-size:27px;letter-spacing:-.5px;margin:0 0 5px}.topline p{font-size:13px;color:var(--muted);margin:0;line-height:1.55}.back{border:1px solid var(--border);background:#1a2c46;color:var(--text);padding:9px 13px;border-radius:12px;font-size:13px}.panel{padding:20px;margin:14px 0}.panel h3{margin:0 0 14px;font-size:18px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:block;margin-bottom:12px}.field>span{display:block;color:#c7d5e8;font-size:12px;font-weight:700;margin-bottom:6px}.input,textarea,select{width:100%;border:1px solid #314762;background:#0b182b;color:var(--text);border-radius:12px;padding:13px 14px;min-height:46px}.input::placeholder,textarea::placeholder{color:#7185a2}textarea{resize:vertical;line-height:1.55;min-height:195px}.button{padding:12px 17px;background:linear-gradient(110deg,var(--accent),#a6f2d4);color:#06291e;border:none;border-radius:12px;font-weight:800;min-height:45px}.button.secondary{background:#203750;color:#f2f8ff;border:1px solid #35516b}.button.danger{background:#36252e;color:#ffb1b1;border:1px solid #5c3443}.button-row{display:flex;gap:9px;flex-wrap:wrap}.hint{font-size:12px;color:var(--muted);line-height:1.5}.tilelist{display:grid;gap:10px}.template{width:100%;display:flex;align-items:center;justify-content:space-between;border:1px solid var(--border);border-radius:13px;padding:14px;text-align:left;color:var(--text);background:#15263f;gap:12px}.template.chosen{border-color:var(--accent);background:#1d3d3d}.template strong{display:block;font-size:14px;margin-bottom:4px}.template span{font-size:12px;color:var(--muted)}.template em{font-style:normal;color:var(--accent2)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0}.stat{background:#10243c;border-radius:16px;padding:15px;border:1px solid var(--border)}.stat label{display:block;font-size:11px;color:var(--muted);margin-bottom:8px}.stat b{font-size:clamp(17px,2.3vw,24px);overflow-wrap:anywhere}.stat.green b{color:var(--accent)}.stat.red b{color:var(--red)}.stat.blue b{color:var(--accent2)}.entry{display:flex;align-items:center;justify-content:space-between;gap:8px;background:#12243b;border:1px solid var(--border);border-radius:13px;padding:12px 13px}.entry .meta{min-width:0;flex:1}.entry strong{font-size:14px;overflow-wrap:anywhere}.entry small{display:block;color:var(--muted);font-size:11px;margin-top:4px}.amount{white-space:nowrap;font-weight:800}.plus{color:var(--accent)}.minus{color:var(--red)}.iconbtn{border:1px solid var(--border);background:#24364b;color:#dce7f5;border-radius:10px;min-width:34px;height:34px;font-size:17px}.todo-line{display:flex;gap:11px;align-items:center;min-width:0;flex:1}.todo-line input{width:20px;height:20px;accent-color:var(--accent);flex:0 0 auto}.todo-line.done strong{text-decoration:line-through;color:#8b9cad}.phrases{display:grid;gap:10px}.phrase{background:#12253c;border:1px solid var(--border);border-radius:15px;padding:15px}.phrase small{color:var(--muted);display:block;margin-bottom:5px}.phrase strong{display:block;font-size:16px;margin-bottom:10px;line-height:1.45}.phrase footer{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:12px;color:#9aadc7}.mini{border:1px solid #355471;color:#e8f8ff;background:#1a3551;border-radius:9px;padding:8px 11px;flex-shrink:0}.empty{text-align:center;padding:24px;color:var(--muted);font-size:13px;border:1px dashed #35506a;border-radius:14px}.fineprint{font-size:12px;color:#8ea2bd;line-height:1.6;padding:16px 0 20px}.nav{position:fixed;z-index:5;bottom:0;left:0;right:0;display:flex;justify-content:center;background:rgba(9,18,33,.96);border-top:1px solid #273750;padding:9px 10px calc(10px + env(safe-area-inset-bottom));backdrop-filter:blur(16px)}.nav-inner{display:flex;justify-content:space-around;gap:4px;width:min(100%,620px)}.navbtn{color:#93a8c4;background:transparent;border:0;min-width:0;flex:1;border-radius:13px;padding:9px 2px 6px;display:grid;justify-items:center;gap:5px;font-size:10px;font-weight:700}.navbtn i{font-size:21px;font-style:normal}.navbtn.active{color:var(--accent);background:#16342f}.toast{position:fixed;bottom:100px;left:50%;transform:translate(-50%,12px);padding:11px 18px;border-radius:12px;background:#c5ffe1;color:#073c27;box-shadow:0 14px 35px #0008;z-index:10;font-weight:800;font-size:13px;opacity:0;transition:.2s;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}.category{color:#b7d7ee;font-size:11px;font-weight:800;letter-spacing:.5px;text-transform:uppercase}.divider{border:none;border-top:1px solid var(--border);margin:18px 0}@media(min-width:780px){.hero{padding:45px 0 33px}.card{min-height:190px;padding:26px}.grid{grid-template-columns:repeat(4,1fr)}.maincols{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}.maincols .panel{margin-top:0}}@media(max-width:430px){header{padding:20px 17px 6px}.shell{padding:0 17px}.hero{padding-top:22px}.card{padding:16px;min-height:148px}.card strong{font-size:16px}.stats{gap:6px}.stat{padding:11px 9px}.stat label{font-size:10px}.stat b{font-size:16px}.panel{padding:16px}.formgrid{grid-template-columns:1fr}.topline{margin-top:15px}.topline h2{font-size:24px}}
+
+/* ONEGO 2.0 additions */
+.header-actions{display:flex;align-items:center;gap:10px}
+.card{position:relative}
+.featured{border-color:rgba(120,239,190,.65);position:relative;background:linear-gradient(150deg,#193c40,#142a47)}
+.badge{position:absolute;top:14px;right:14px;background:#78efbe;color:#06432a;border-radius:20px;font-size:10px;font-weight:900;padding:5px 8px;letter-spacing:.6px}
+.feature-callout{background:#17343a;border:1px solid #386c68;border-radius:14px;color:#dcfdf2;padding:14px 16px;font-size:13px;line-height:1.55;margin:12px 0 20px}
+.inline-between{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.bill-row{display:flex;flex-wrap:wrap;align-items:center;gap:9px;padding:14px;background:#12243b;border:1px solid var(--border);border-radius:14px}
+.bill-data{min-width:140px;flex:1}
+.bill-data strong{display:block;font-size:14px;overflow-wrap:anywhere}
+.bill-data small{display:block;color:var(--muted);margin-top:4px;font-size:12px}
+.bill-row .bill-controls{display:flex;flex-wrap:wrap;gap:5px}
+.bill-row.overdue{border-color:#a24b5e}
+.bill-row.completed{opacity:.7}
+.bill-mark{border-radius:7px;padding:3px 6px;background:#2b3b51;color:#ffb7b7;font-size:11px;display:inline-block;margin-left:4px}
+@media(min-width:780px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:450px){.header-actions .mini{font-size:12px;padding:6px 8px}.tag{font-size:10px;padding:7px}.bill-row .bill-controls .mini{font-size:11px}}
+
+/* ONEGO 3.0: CV preview, transparent support page & legal navigation */
+.cv-preview{background:white;color:#202939;border-radius:14px;padding:25px;min-height:390px;box-shadow:0 4px 20px #0002;font-size:13px;line-height:1.5;overflow-wrap:anywhere}
+.cv-preview h2{color:#142f46;margin:0 0 4px;font-size:26px;letter-spacing:-.8px}
+.cv-preview .cv-position{color:#3b6482;font-size:14px;font-weight:700;margin-bottom:12px}
+.cv-preview .cv-contact{font-size:11px;color:#536579;border-bottom:2px solid #dbebef;padding-bottom:12px}
+.cv-block{padding:14px 0 0}.cv-block h3{color:#116170;letter-spacing:.4px;text-transform:uppercase;font-size:11px;margin:0 0 5px}.cv-block p{margin:0;white-space:pre-line;color:#28394d}
+.info-panel{background:#102c38;border:1px solid #2a6670;border-radius:16px;padding:16px;color:#d7f8f8;font-size:13px;line-height:1.6}
+.legal-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:7px}.legal-links a{color:#9fdcf4;text-decoration:underline;font-size:12px}
+.sheet-print{display:none}
+@media print{body{background:white!important;padding:0!important;color:#1a2635!important}.shell,header,.nav,.toast{display:none!important}.sheet-print{display:block!important;padding:12mm 14mm;max-width:210mm;margin:0 auto;font-family:Arial,sans-serif;color:#253449}.sheet-print h1{font-size:26pt;margin:0;color:#12394e}.sheet-print .cv-position{font-weight:bold;color:#236884;margin-top:3mm}.sheet-print .cv-contact{font-size:10pt;padding-bottom:4mm;border-bottom:2px solid #d8e6eb}.sheet-print .cv-block{padding-top:6mm;break-inside:avoid}.sheet-print .cv-block h3{color:#22677a;font-size:10pt;text-transform:uppercase;letter-spacing:1px}.sheet-print .cv-block p{white-space:pre-line;font-size:11pt;line-height:1.45}}
+/* ONEGO 4.0 Premium */
+.premium-card{border-color:#b89757;background:linear-gradient(150deg,#4b3828,#14263f)}
+.premium-head{background:radial-gradient(ellipse at top right,#4c3b26,transparent 65%),linear-gradient(145deg,#253047,#162239);border-color:#917349}
+.premium-head h2{font-size:clamp(25px,5vw,37px);letter-spacing:-.8px;margin:13px 0 6px}
+.premium-chip{display:inline-block;background:#fbd28e;border-radius:99px;color:#453018;padding:7px 13px;font-size:11px;font-weight:850;letter-spacing:1px}
+.premium-price{font-size:clamp(38px,8vw,59px);font-weight:850;color:#ffe0aa;letter-spacing:-1.5px;margin-top:8px}
+.premium-price small{font-size:18px;color:#dae1ef;letter-spacing:0;font-weight:600}
+.premium-sub{font-size:12px;color:#d4dae3;line-height:1.6}
+.premium-features{display:grid;gap:9px;margin:22px 0}
+.premium-features>div{padding:10px 13px;border:1px solid #626055;border-radius:11px;background:#ffffff0d;line-height:1.5}
+[hidden]{display:none!important}
+
+</style>
+</head>
+<body>
+<header><div class="brand"><span class="logo">➤</span> ONEGO</div><div class="header-actions"><button class="mini" id="shareApp" type="button" title="ONEGO teilen">↗ Teilen</button><div class="tag">ONEGO · V4</div></div></header>
+<main class="shell">
+<section id="home" class="section active" aria-labelledby="homeTitle"><div class="hero"><div class="eyebrow">Alles an einem Ort</div><h1 id="homeTitle">Mehr erledigen.<br><span>Weniger Aufwand.</span></h1><p>Bewerbungen und Lebensläufe erstellen, Rechnungen verwalten, Budget planen und Alltagstexte schreiben. Kostenlos, ohne Anmeldung – direkt auf deinem Handy.</p></div><div class="grid">
+<button class="card featured" data-go="bewerbung"><div class="icon">💼</div><strong>Bewerbung erstellen</strong><small>Mit deinen Angaben ein passendes Anschreiben erzeugen ↗</small><span class="badge">NEU</span></button>
+<button class="card featured" data-go="lebenslauf"><div class="icon">📄</div><strong>Lebenslauf erstellen</strong><small>Deine Daten als sauberes PDF drucken oder teilen ↗</small><span class="badge">NEU</span></button>
+<button class="card" data-go="texte"><div class="icon">✍️</div><strong>Texte & Vorlagen</strong><small>Fertige Nachrichten anpassen und kopieren ↗</small></button>
+<button class="card" data-go="budget"><div class="icon">💶</div><strong>Budget</strong><small>Einnahmen und Ausgaben übersichtlich verwalten ↗</small></button>
+<button class="card" data-go="aufgaben"><div class="icon">✅</div><strong>Aufgaben</strong><small>Deine To-dos festhalten und abhaken ↗</small></button>
+<button class="card" data-go="rechnungen"><div class="icon">📅</div><strong>Rechnungen & Fristen</strong><small>Fälligkeit eintragen und Kalenderdatei speichern ↗</small><span class="badge">NEU</span></button>
+<button class="card" data-go="sprachen"><div class="icon">🌍</div><strong>Sprachen</strong><small>Alltagssätze in fünf Sprachen ↗</small></button>
+<button class="card premium-card" data-go="premium"><div class="icon">👑</div><strong>ONEGO Premium</strong><small>Pro-Bewerbung, Budget-CSV & Sammelkalender ↗</small><span class="badge" style="background:#ffd998;color:#513514">4,99 €/Monat</span></button>
+<button class="card" data-go="unterstuetzen"><div class="icon">💚</div><strong>ONEGO unterstützen</strong><small>Freiwillig helfen, die App kostenlos zu halten ↗</small></button></div>
+<div class="panel" style="margin-top:19px"><span class="category">Deine Übersicht</span><div class="stats"><div class="stat green"><label>Offene Aufgaben</label><b id="homeTodo">0</b></div><div class="stat blue"><label>Budgetsaldo</label><b id="homeBalance">0,00 €</b></div><div class="stat"><label>Offene Rechnungen</label><b id="homeBills">0</b></div></div><p class="hint" style="margin-bottom:0">🔒 Deine eingegebenen Aufgaben, Budgeteinträge und Rechnungen liegen lokal in diesem Browser. Du brauchst kein Konto. Bei einem Browserwechsel gehen diese lokalen Daten nicht automatisch mit. Beim Aufruf der Website können technische Hosting-Logs anfallen.</p></div></section>
+
+<section id="bewerbung" class="section" aria-labelledby="bewerbungTitle">
+  <div class="topline"><div><h2 id="bewerbungTitle">💼 Bewerbungshelfer</h2><p>Ein überzeugender Anfang – basierend ausschließlich auf deinen eigenen Angaben.</p></div><button class="back" data-go="home">← Startseite</button></div>
+  <div class="feature-callout">⚡ <strong>In 2 Minuten zum Anschreiben.</strong> Kein Konto, kein Abo und kein KI-Schlüssel erforderlich.</div>
+  <div class="maincols">
+    <div class="panel"><h3>Deine Angaben</h3>
+      <form id="applicationForm">
+        <label class="field"><span>Art der Bewerbung</span><select id="appMode" class="input"><option value="stellenanzeige">Auf eine Stellenanzeige</option><option value="initiativ">Initiativbewerbung</option></select></label>
+        <div class="formgrid"><label class="field"><span>Dein Name *</span><input id="appName" class="input" maxlength="100" autocomplete="name" placeholder="Vorname Nachname" required></label><label class="field"><span>Beruf / Position *</span><input id="appJob" class="input" maxlength="110" placeholder="z. B. Lagerarbeiter/in" required></label></div>
+        <label class="field"><span>Unternehmen (optional)</span><input id="appCompany" class="input" maxlength="120" placeholder="Firmenname"></label>
+        <label class="field"><span>Berufserfahrung (nur echte Angaben)</span><textarea id="appExperience" maxlength="600" rows="3" placeholder="z. B. 2 Jahre Erfahrung im Verkauf und Kundenkontakt"></textarea></label>
+        <label class="field"><span>Stärken (optional)</span><input id="appSkills" class="input" maxlength="210" placeholder="z. B. zuverlässig, freundlich, teamfähig"></label>
+        <div class="formgrid"><label class="field"><span>Verfügbarkeit (optional)</span><input id="appAvailable" class="input" maxlength="100" placeholder="z. B. ab sofort"></label><label class="field"><span>Stil</span><select id="appStyle" class="input"><option value="formal">Professionell</option><option value="short">Kurz & direkt</option></select></label></div>
+        <button class="button" type="submit">✨ Anschreiben erstellen</button>
+      </form><p class="hint">Die Angaben werden für den Text nur in deinem Browser verarbeitet und nicht auf einen Server übertragen. Prüfe den fertigen Text vor dem Versenden.</p>
+    </div>
+    <div class="panel"><h3>Dein Anschreiben</h3><label class="field"><span>Text bearbeiten und anpassen</span><textarea id="appOutput" style="min-height:310px" placeholder="Fülle die Angaben aus und tippe auf „Anschreiben erstellen“." spellcheck="true"></textarea></label>
+      <div class="button-row"><button class="button" id="appCopy" type="button">📋 Kopieren</button><button class="button secondary" id="appDownload" type="button">↓ TXT speichern</button><button class="button secondary" id="appShare" type="button">↗ Senden</button></div>
+      <p class="hint">Kein automatischer Lebenslauf und keine erfundenen Qualifikationen. Du kannst jeden Satz frei bearbeiten.</p>
+    </div>
+  </div>
+</section>
+
+<section id="lebenslauf" class="section" aria-labelledby="cvTitle">
+  <div class="topline"><div><h2 id="cvTitle">📄 Lebenslauf erstellen</h2><p>Trage ausschließlich echte Angaben ein. Die Vorschau entsteht direkt auf deinem Gerät.</p></div><button class="back" data-go="home">← Startseite</button></div>
+  <div class="maincols">
+   <div class="panel"><h3>Deine Angaben</h3><form id="cvForm">
+    <div class="formgrid"><label class="field"><span>Vor- und Nachname *</span><input id="cvName" class="input" maxlength="100" required placeholder="Max Mustermann"></label><label class="field"><span>Gewünschter Beruf</span><input id="cvTitleInput" class="input" maxlength="100" placeholder="z. B. Verkäufer/in"></label></div>
+    <div class="formgrid"><label class="field"><span>E-Mail</span><input id="cvEmail" type="email" class="input" maxlength="120" placeholder="name@beispiel.at"></label><label class="field"><span>Telefon</span><input id="cvPhone" type="tel" class="input" maxlength="60" placeholder="+43 ..."></label></div>
+    <label class="field"><span>Wohnort (freiwillig, keine volle Adresse nötig)</span><input id="cvCity" class="input" maxlength="100" placeholder="Wien, Österreich"></label>
+    <label class="field"><span>Kurzprofil (optional)</span><textarea id="cvProfile" maxlength="450" rows="3" placeholder="Wer bist du beruflich? Was bringst du mit?"></textarea></label>
+    <label class="field"><span>Berufserfahrung (eine Station pro Zeile)</span><textarea id="cvExperience" maxlength="1400" rows="4" placeholder="2022–2025 · Verkäufer/in · Firma XY – Kundenservice und Lager"></textarea></label>
+    <label class="field"><span>Ausbildung (eine Station pro Zeile)</span><textarea id="cvEducation" maxlength="900" rows="3" placeholder="2019–2022 · Lehre als ..."></textarea></label>
+    <label class="field"><span>Kenntnisse & Stärken</span><textarea id="cvSkills" maxlength="650" rows="2" placeholder="MS Office, Teamarbeit, Verkauf"></textarea></label>
+    <label class="field"><span>Sprachen (optional)</span><input id="cvLanguages" class="input" maxlength="230" placeholder="Deutsch, Englisch, Türkisch"></label>
+    <button type="submit" class="button">✨ Lebenslauf erstellen</button>
+   </form><p class="hint">Keine Anmeldung. Deine Lebenslaufdaten werden nicht an uns übertragen oder automatisch gespeichert. Du kannst sie als Text kopieren.</p></div>
+   <div class="panel"><h3>Vorschau</h3><div class="cv-preview" id="cvPreview"><p style="color:#536579">Fülle links das Formular aus. Hier erscheint dein Lebenslauf.</p></div>
+    <div class="button-row" style="margin-top:15px"><button class="button" id="cvPrint" type="button">🖨️ Drucken / PDF</button><button class="button secondary" id="cvCopy" type="button">📋 Text kopieren</button></div>
+    <p class="hint">Auf dem iPhone: „Drucken / PDF“ wählen und im Druckdialog als PDF sichern. Je nach Browser unterscheiden sich die Schritte.</p>
+   </div>
+  </div>
+</section>
+<section id="unterstuetzen" class="section" aria-labelledby="supportTitle">
+ <div class="topline"><div><h2 id="supportTitle">💚 ONEGO unterstützen</h2><p>Die Grundfunktionen bleiben kostenlos. Eine Unterstützung ist freiwillig.</p></div><button class="back" data-go="home">← Startseite</button></div>
+ <div class="panel"><h3>Hilf mit, ONEGO weiterzuentwickeln</h3><p style="line-height:1.6;color:var(--muted)">Wenn dir ONEGO hilft, kannst du das Projekt künftig mit einem frei wählbaren Betrag unterstützen. Dafür erhältst du keine zusätzlichen Funktionen und gehst kein Abonnement ein.</p>
+ <div class="info-panel" id="supportStatus">🔒 Die Zahlungsfunktion ist noch nicht eingerichtet. Zurzeit ist der freiwillige Unterstützungslink nicht eingerichtet.</div>
+ <div class="button-row" style="margin-top:17px"><a id="supportLink" class="button" href="#" hidden rel="noopener noreferrer" target="_blank">💚 Jetzt freiwillig unterstützen ↗</a></div>
+ <p class="hint">Zahlungen würden erst nach ausdrücklicher Weiterleitung auf die sichere Zahlungsseite eines externen Anbieters stattfinden. Ein Premium-Abo ist separat und nur nach vollständiger Freischaltung erhältlich.</p></div>
+</section>
+
+<section id="premium" class="section" aria-labelledby="premiumTitle">
+ <div class="topline"><div><h2 id="premiumTitle">👑 ONEGO Premium</h2><p>Mehr Werkzeuge für deinen Alltag. Alle bisherigen Grundfunktionen bleiben kostenlos.</p></div><button class="back" data-go="home">← Startseite</button></div>
+ <div class="premium-head panel"><span class="premium-chip">ONEGO PREMIUM</span><h2>Mehr erledigen. Mit Extra-Funktionen.</h2><div class="premium-price">4,99 € <small>/ Monat</small></div><p class="premium-sub">Monatlich wiederkehrendes Abo · Keine KI · Keine Garantie auf Bewerbungszusagen</p>
+ <div class="premium-features"><div>✓ <strong>Pro-Bewerbung:</strong> 3 zusätzliche Schreibstile</div><div>✓ <strong>Budget-Export:</strong> CSV für Excel & Tabellen</div><div>✓ <strong>Fristen:</strong> alle offenen Termine in einer Kalenderdatei</div></div>
+ <p class="hint" style="color:#ffe0b0">Alle Premium-Funktionen erfordern eine aktive, bei Stripe bestätigte Mitgliedschaft. Ein Abo wird erst dann zum Kauf angeboten, wenn die Einrichtung abgeschlossen wurde.</p>
+ <div id="premiumState" class="info-panel" role="status">⌛ Premium wird geprüft …</div>
+ <div class="button-row" style="margin-top:14px"><a id="premiumSubscribe" class="button" href="#" hidden rel="noopener noreferrer">👑 Premium buchen – 4,99 € / Monat ↗</a><button id="premiumRetry" class="button secondary" type="button">↻ Status prüfen</button></div>
+ <p class="hint">Dein Vertrag und deine Zahlungsdaten werden über Stripe verwaltet. Die Aktivierung erfolgt nach der Zahlungsbestätigung. Bei Problemen wende dich an den ONEGO-Betreiber. Ein bestehendes Abo kannst du über den Stripe-Kundenbereich verwalten, sofern der Betreiber ihn aktiviert hat.</p>
+ </div>
+ <div class="panel"><h3>🔑 Mitgliedschaft auf diesem Gerät</h3><p class="hint">Nach dem Bezahlen kehrst du automatisch hierher zurück. Nur falls du deinen Zugang auf einem anderen Gerät wiederherstellen möchtest: Du brauchst die Checkout-Sitzungs-ID aus deinem persönlichen Aktivierungslink. Teile sie nicht mit anderen.</p>
+ <label class="field"><span>Checkout-Sitzungs-ID (optional)</span><input id="premiumRecovery" class="input" placeholder="cs_live_…" type="password" autocomplete="off" spellcheck="false"></label>
+ <div class="button-row"><button id="premiumRestore" class="button secondary" type="button">Zugang wiederherstellen</button><button id="premiumForget" class="button danger" type="button">Zugang auf Gerät löschen</button></div></div>
+ <div id="premiumTools" hidden>
+  <div class="panel"><h3>💼 Premium-Anschreiben</h3><p class="hint">Die Angaben werden für die Erstellung kurzzeitig an die ONEGO-Serverfunktion übertragen und dort nicht in einer Datenbank gespeichert. Kein generativer KI-Service.</p>
+   <form id="proAppForm"><div class="formgrid"><label class="field"><span>Dein Name *</span><input class="input" id="proName" required maxlength="100" placeholder="Vorname Nachname"></label><label class="field"><span>Stelle *</span><input class="input" id="proJob" required maxlength="120" placeholder="z. B. Verkäufer/in"></label></div>
+   <label class="field"><span>Unternehmen</span><input class="input" id="proCompany" maxlength="120" placeholder="Firma"></label>
+   <label class="field"><span>Berufserfahrung</span><textarea id="proExperience" maxlength="600" rows="3" placeholder="Nur echte Angaben"></textarea></label>
+   <label class="field"><span>Stärken</span><input id="proSkills" class="input" maxlength="200" placeholder="z. B. belastbar, sorgfältig"></label>
+   <div class="formgrid"><label class="field"><span>Verfügbarkeit</span><input id="proAvailability" class="input" maxlength="100" placeholder="z. B. ab sofort"></label><label class="field"><span>Stil</span><select id="proStyle" class="input"><option value="modern">Modern</option><option value="klassisch">Klassisch</option><option value="kurz">Kurz & klar</option></select></label></div>
+   <div class="button-row"><button class="button" type="submit">✨ Pro-Anschreiben erstellen</button><button type="button" class="button secondary" id="proImport">↶ Daten aus kostenlosem Formular</button></div></form>
+   <label class="field" style="margin-top:18px"><span>Dein bearbeitbarer Text</span><textarea id="proResult" placeholder="Hier erscheint dein Pro-Anschreiben"></textarea></label><div class="button-row"><button id="proCopy" class="button secondary" type="button">📋 Kopieren</button><button id="proDownload" class="button secondary" type="button">↓ TXT speichern</button></div>
+  </div>
+  <div class="maincols"><div class="panel"><h3>📊 Budget als CSV</h3><p class="hint">Exportiere die lokal gespeicherten Budgeteinträge als Excel-kompatible Datei.</p><button class="button" type="button" id="proCSV">↓ Budget exportieren</button></div>
+  <div class="panel"><h3>📅 Sammelkalender</h3><p class="hint">Eine .ics-Datei mit allen offenen Fristen. Kalender-Erinnerungen werden von der Kalender-App gesteuert.</p><button class="button" type="button" id="proCalendar">↓ Alle Fristen exportieren</button></div></div>
+ </div>
+</section>
+
+<section id="rechnungen" class="section" aria-labelledby="billTitle">
+  <div class="topline"><div><h2 id="billTitle">📅 Rechnungen & Fristen</h2><p>Fälligkeiten verfolgen und einzelne Termine in deinen Kalender übernehmen.</p></div><button class="back" data-go="home">← Startseite</button></div>
+  <div class="stats"><div class="stat green"><label>Bezahlt</label><b id="billPaid">0</b></div><div class="stat blue"><label>Offen</label><b id="billOpen">0</b></div><div class="stat red"><label>Überfällig</label><b id="billOverdue">0</b></div></div>
+  <div class="maincols">
+    <div class="panel"><h3>Neue Rechnung / Frist</h3><form id="billForm">
+      <label class="field"><span>Titel *</span><input id="billName" class="input" maxlength="90" placeholder="z. B. Stromrechnung" required></label>
+      <div class="formgrid"><label class="field"><span>Fällig am *</span><input type="date" id="billDate" class="input" required></label><label class="field"><span>Betrag in Euro (optional)</span><input type="number" id="billAmount" class="input" min="0" step="0.01" max="100000000" inputmode="decimal" placeholder="79,90"></label></div>
+      <button class="button" type="submit">+ Frist speichern</button>
+    </form><p class="hint">ONEGO versendet keine automatischen Push-Nachrichten. Mit „Kalender“ exportierst du einen Termin mit Erinnerung (sofern deine Kalender-App dies unterstützt).</p></div>
+    <div class="panel"><div class="inline-between"><h3 style="margin:0">Deine Fristen</h3><button class="mini" id="billClearPaid">Bezahlte löschen</button></div><div class="tilelist" style="margin-top:15px" id="billList"></div></div>
+  </div>
+</section>
+
+<section id="texte" class="section" aria-labelledby="texteTitle"><div class="topline"><div><h2 id="texteTitle">✍️ Texte & Vorlagen</h2><p>Vorlage auswählen, bearbeiten und direkt kopieren.</p></div><button class="back" data-go="home">← Startseite</button></div><div class="maincols"><div class="panel"><h3>Vorlage wählen</h3><div class="tilelist" id="templates"></div></div><div class="panel"><h3>Dein Text</h3><label class="field"><span>Vorlage bearbeiten</span><textarea id="textEditor" spellcheck="true"></textarea></label><div class="button-row"><button class="button" id="copyText">📋 Text kopieren</button><button class="button secondary" id="resetText">↻ Zurücksetzen</button></div><p class="hint">Tipp: Ersetze Angaben in eckigen Klammern, zum Beispiel [Name], durch deine eigenen Angaben.</p></div></div></section>
+<section id="budget" class="section" aria-labelledby="budgetTitle"><div class="topline"><div><h2 id="budgetTitle">💶 Mein Budget</h2><p>Einnahmen und Ausgaben erfassen. Alles bleibt auf diesem Gerät.</p></div><button class="back" data-go="home">← Startseite</button></div><div class="stats"><div class="stat green"><label>Einnahmen</label><b id="incomeTotal">0,00 €</b></div><div class="stat red"><label>Ausgaben</label><b id="expenseTotal">0,00 €</b></div><div class="stat blue"><label>Saldo</label><b id="balanceTotal">0,00 €</b></div></div><div class="maincols"><div class="panel"><h3>Neuer Eintrag</h3><form id="budgetForm"><div class="formgrid"><label class="field"><span>Art</span><select id="budgetType" class="input" required><option value="expense">Ausgabe −</option><option value="income">Einnahme +</option></select></label><label class="field"><span>Betrag (€)</span><input id="budgetAmount" class="input" type="number" inputmode="decimal" min="0.01" step="0.01" placeholder="z. B. 25,50" required></label></div><label class="field"><span>Beschreibung</span><input id="budgetNote" class="input" maxlength="90" placeholder="z. B. Einkauf, Gehalt" required></label><button class="button" type="submit">+ Eintrag speichern</button></form></div><div class="panel"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><h3 style="margin:0">Letzte Einträge</h3><button class="mini" id="budgetClear" title="Alle Budgeteinträge löschen">Alle löschen</button></div><div class="tilelist" id="budgetList" style="margin-top:15px"></div></div></div></section>
+<section id="aufgaben" class="section" aria-labelledby="taskTitle"><div class="topline"><div><h2 id="taskTitle">✅ Meine Aufgaben</h2><p>To-dos erfassen, abhaken oder löschen.</p></div><button class="back" data-go="home">← Startseite</button></div><div class="maincols"><div class="panel"><h3>Neue Aufgabe</h3><form id="taskForm"><label class="field"><span>Was möchtest du erledigen?</span><input id="taskInput" class="input" maxlength="140" placeholder="z. B. Termin vereinbaren" required></label><button class="button" type="submit">+ Aufgabe hinzufügen</button></form></div><div class="panel"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><h3 style="margin:0">Deine Liste <span id="taskCount" style="font-weight:400;color:var(--muted)"></span></h3><button class="mini" id="clearDone">Erledigte löschen</button></div><div id="taskList" class="tilelist" style="margin-top:16px"></div></div></div></section>
+<section id="sprachen" class="section" aria-labelledby="langTitle"><div class="topline"><div><h2 id="langTitle">🌍 Sprachen</h2><p>Kurze, nützliche Beispielsätze für den Alltag. Keine automatische Übersetzung.</p></div><button class="back" data-go="home">← Startseite</button></div><div class="panel"><div class="formgrid"><label class="field"><span>Zielsprache</span><select class="input" id="languageSelect"><option value="en">Englisch 🇬🇧</option><option value="tr">Türkisch 🇹🇷</option><option value="fr">Französisch 🇫🇷</option><option value="es">Spanisch 🇪🇸</option><option value="de">Deutsch 🇩🇪</option></select></label><label class="field"><span>Bereich</span><select class="input" id="phraseCategory"><option value="all">Alle Bereiche</option><option value="alltag">Alltag</option><option value="reise">Reisen</option><option value="arbeit">Arbeit</option><option value="gesundheit">Gesundheit</option></select></label></div><div class="phrases" id="phraseList"></div><p class="hint">Die Sätze sind vorbereitet und nicht auf jede Situation zugeschnitten. Für wichtige medizinische oder rechtliche Gespräche eine qualifizierte Übersetzung nutzen.</p></div></section>
+<div class="legal-links"><a href="./impressum.html">Impressum (Angaben ergänzen)</a><a href="./datenschutz.html">Datenschutz (Entwurf)</a><a href="./abo.html">Abo-Bedingungen (Entwurf)</a></div>
+<div class="fineprint">ONEGO · Freie Basisfunktionen · Version 4.0. Allgemeine Hilfsmittel, keine Rechts- oder Finanzberatung. Keine Werbung, kein KI-Dienst. Premium-Abo nur nach Einrichtung der Stripe-Schnittstelle verfügbar.</div>
+</main>
+<nav class="nav" aria-label="Hauptnavigation"><div class="nav-inner"><button class="navbtn active" data-go="home"><i>⌂</i>Start</button><button class="navbtn" data-go="texte"><i>✍</i>Texte</button><button class="navbtn" data-go="budget"><i>€</i>Budget</button><button class="navbtn" data-go="aufgaben"><i>✓</i>Aufgaben</button><button class="navbtn" data-go="sprachen"><i>◎</i>Sprachen</button></div></nav><div id="toast" class="toast" role="status" aria-live="polite"></div>
+<div class="sheet-print" id="cvPrintable"></div>
+<script src="./config.js"></script>
+<script>
+(()=>{'use strict';
+const $=id=>document.getElementById(id);
+const save=(name,data)=>{try{localStorage.setItem('onego_v1_'+name,JSON.stringify(data))}catch(e){notify('Speichern auf diesem Gerät nicht möglich')}};
+const load=(name,fallback)=>{try{let value=JSON.parse(localStorage.getItem('onego_v1_'+name));return Array.isArray(value)?value:fallback}catch(e){return fallback}};
+const euros=n=>new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'}).format(n);
+let toastTimeout;function notify(message){const el=$('toast');el.textContent=message;el.classList.add('show');clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>el.classList.remove('show'),2500)}
+function go(id){document.querySelectorAll('.section').forEach(el=>el.classList.toggle('active',el.id===id));document.querySelectorAll('.navbtn').forEach(el=>el.classList.toggle('active',el.dataset.go===id));window.scrollTo({top:0,behavior:'instant'});if(id==='home')updateHome()}
+document.querySelectorAll('[data-go]').forEach(el=>el.addEventListener('click',()=>go(el.dataset.go)));
+async function copy(value){try{await navigator.clipboard.writeText(value);notify('Kopiert! ✓')}catch(e){const tmp=document.createElement('textarea');tmp.value=value;tmp.style.position='fixed';tmp.style.opacity='0';document.body.append(tmp);tmp.select();try{document.execCommand('copy');notify('Kopiert! ✓')}catch(_){notify('Text markieren und kopieren')}tmp.remove()}}
+const templates=[
+{title:'Termin vereinbaren',desc:'Höflich einen Termin anfragen',text:'Guten Tag,\n\nich möchte gerne einen Termin für [Anliegen] vereinbaren. Können Sie mir bitte einen passenden Termin vorschlagen?\n\nVielen Dank im Voraus.\n\nMit freundlichen Grüßen\n[Dein Name]'},
+{title:'Termin absagen',desc:'Einen Termin verschieben oder absagen',text:'Guten Tag,\n\nleider kann ich meinen Termin am [Datum] um [Uhrzeit] nicht wahrnehmen. Ich bitte um Entschuldigung und würde gerne einen Ersatztermin vereinbaren.\n\nVielen Dank für Ihr Verständnis.\n\nMit freundlichen Grüßen\n[Dein Name]'},
+{title:'Bewerbung – kurze Anfrage',desc:'Interesse an einer Stelle zeigen',text:'Sehr geehrte Damen und Herren,\n\nmit großem Interesse habe ich Ihre Stellenanzeige für die Position [Position] gelesen. Gerne möchte ich mich dafür bewerben.\n\nÜber die Möglichkeit eines persönlichen Gesprächs würde ich mich sehr freuen.\n\nMit freundlichen Grüßen\n[Dein Name]'},
+{title:'Freundliche Nachfrage',desc:'Nachricht oder Rückmeldung anfordern',text:'Guten Tag,\n\nich wollte höflich nachfragen, ob es zu meiner Anfrage vom [Datum] bereits eine Rückmeldung gibt.\n\nVielen Dank für Ihre Zeit und Ihre Antwort.\n\nMit freundlichen Grüßen\n[Dein Name]'},
+{title:'Reklamation',desc:'Ein Problem sachlich melden',text:'Guten Tag,\n\nich möchte folgendes Problem melden: [Problem beschreiben]. Es betrifft [Produkt/Vertrag/Bestellung] vom [Datum].\n\nBitte prüfen Sie den Sachverhalt und teilen Sie mir mit, wie wir das Problem lösen können.\n\nMit freundlichen Grüßen\n[Dein Name]'},
+{title:'Kurze Dankesnachricht',desc:'Sich bei jemandem bedanken',text:'Hallo [Name],\n\nvielen Dank für deine Unterstützung und deine Zeit. Ich habe mich wirklich sehr darüber gefreut!\n\nLiebe Grüße\n[Dein Name]'}
+];
+let templateIndex=0;function renderTemplates(){const list=$('templates');list.replaceChildren();templates.forEach((v,i)=>{const b=document.createElement('button');b.className='template'+(i===templateIndex?' chosen':'');const wrap=document.createElement('div');const h=document.createElement('strong');h.textContent=v.title;const d=document.createElement('span');d.textContent=v.desc;wrap.append(h,d);const arrow=document.createElement('em');arrow.textContent='→';b.append(wrap,arrow);b.addEventListener('click',()=>{templateIndex=i;$('textEditor').value=v.text;renderTemplates()});list.append(b)})}renderTemplates();$('textEditor').value=templates[0].text;$('copyText').addEventListener('click',()=>copy($('textEditor').value));$('resetText').addEventListener('click',()=>{$('textEditor').value=templates[templateIndex].text;notify('Vorlage zurückgesetzt')});
+let entries=load('budget',[]);let tasks=load('tasks',[]);const uid=()=>Date.now().toString(36)+'_'+Math.random().toString(36).slice(2,9);
+function updateHome(){let sum=entries.reduce((a,e)=>a+(e.type==='income'?e.amount:-e.amount),0);$('homeBalance').textContent=euros(sum);$('homeTodo').textContent=tasks.filter(t=>!t.done).length;if(typeof bills!=='undefined')$('homeBills').textContent=bills.filter(b=>!b.done).length}
+function renderBudget(){let income=0,expense=0;for(const e of entries){if(e.type==='income')income+=e.amount;else expense+=e.amount}$('incomeTotal').textContent=euros(income);$('expenseTotal').textContent=euros(expense);$('balanceTotal').textContent=euros(income-expense);const list=$('budgetList');list.replaceChildren();if(!entries.length){const empty=document.createElement('div');empty.className='empty';empty.textContent='Noch keine Einträge. Starte mit deinem ersten Betrag.';list.append(empty)}for(const e of [...entries].reverse()){const row=document.createElement('div');row.className='entry';const meta=document.createElement('div');meta.className='meta';const strong=document.createElement('strong');strong.textContent=e.note;const small=document.createElement('small');small.textContent=(e.type==='income'?'Einnahme':'Ausgabe')+' · '+(e.date||'');meta.append(strong,small);const amount=document.createElement('span');amount.className='amount '+(e.type==='income'?'plus':'minus');amount.textContent=(e.type==='income'?'+':'−')+euros(e.amount);const del=document.createElement('button');del.className='iconbtn';del.textContent='×';del.setAttribute('aria-label','Eintrag löschen');del.addEventListener('click',()=>{entries=entries.filter(x=>x.id!==e.id);save('budget',entries);renderBudget();updateHome()});row.append(meta,amount,del);list.append(row)}updateHome()}
+$('budgetForm').addEventListener('submit',event=>{event.preventDefault();const amount=Number($('budgetAmount').value);const note=$('budgetNote').value.trim();if(!Number.isFinite(amount)||amount<=0||amount>1e9||!note){notify('Bitte gültigen Betrag und Text eingeben');return}entries.push({id:uid(),type:$('budgetType').value,amount:Math.round(amount*100)/100,note,date:new Date().toLocaleDateString('de-DE')});save('budget',entries);$('budgetForm').reset();renderBudget();notify('Eintrag gespeichert ✓')});$('budgetClear').addEventListener('click',()=>{if(!entries.length)return;if(confirm('Wirklich ALLE Budgeteinträge löschen?')){entries=[];save('budget',entries);renderBudget();notify('Einträge gelöscht')}});
+function renderTasks(){const list=$('taskList');list.replaceChildren();$('taskCount').textContent='('+tasks.filter(t=>!t.done).length+' offen)';if(!tasks.length){const empty=document.createElement('div');empty.className='empty';empty.textContent='Noch keine Aufgaben. Füge deine erste Aufgabe hinzu.';list.append(empty)}for(const t of [...tasks].sort((a,b)=>Number(a.done)-Number(b.done))){const row=document.createElement('div');row.className='entry';const lab=document.createElement('label');lab.className='todo-line'+(t.done?' done':'');const chk=document.createElement('input');chk.type='checkbox';chk.checked=Boolean(t.done);chk.setAttribute('aria-label','Aufgabe erledigt');chk.addEventListener('change',()=>{t.done=chk.checked;save('tasks',tasks);renderTasks()});const strong=document.createElement('strong');strong.textContent=t.text;lab.append(chk,strong);const del=document.createElement('button');del.className='iconbtn';del.textContent='×';del.setAttribute('aria-label','Aufgabe löschen');del.addEventListener('click',()=>{tasks=tasks.filter(x=>x.id!==t.id);save('tasks',tasks);renderTasks()});row.append(lab,del);list.append(row)}updateHome()}
+$('taskForm').addEventListener('submit',event=>{event.preventDefault();const value=$('taskInput').value.trim();if(!value)return;tasks.push({id:uid(),text:value,done:false});save('tasks',tasks);$('taskForm').reset();renderTasks();notify('Aufgabe hinzugefügt ✓')});$('clearDone').addEventListener('click',()=>{const n=tasks.filter(t=>t.done).length;if(!n){notify('Keine erledigten Aufgaben');return}tasks=tasks.filter(t=>!t.done);save('tasks',tasks);renderTasks();notify('Erledigte Aufgaben gelöscht')});
+const phraseData=[
+['alltag','Hallo! Wie geht es Ihnen?','Hello! How are you?','Merhaba! Nasılsınız?','Bonjour ! Comment allez-vous ?','¡Hola! ¿Cómo está?'],
+['alltag','Vielen Dank für Ihre Hilfe.','Thank you very much for your help.','Yardımınız için çok teşekkür ederim.','Merci beaucoup pour votre aide.','Muchas gracias por su ayuda.'],
+['alltag','Können Sie das bitte wiederholen?','Could you please repeat that?','Bunu tekrar edebilir misiniz?','Pouvez-vous répéter, s’il vous plaît ?','¿Puede repetirlo, por favor?'],
+['alltag','Ich verstehe nicht.','I do not understand.','Anlamıyorum.','Je ne comprends pas.','No entiendo.'],
+['reise','Wo ist der Bahnhof?','Where is the train station?','Tren istasyonu nerede?','Où est la gare ?','¿Dónde está la estación de tren?'],
+['reise','Wie viel kostet das?','How much does this cost?','Bu ne kadar?','Combien ça coûte ?','¿Cuánto cuesta esto?'],
+['reise','Ich habe eine Reservierung.','I have a reservation.','Rezervasyonum var.','J’ai une réservation.','Tengo una reserva.'],
+['reise','Wo ist die nächste Toilette?','Where is the nearest toilet?','En yakın tuvalet nerede?','Où sont les toilettes les plus proches ?','¿Dónde está el baño más cercano?'],
+['arbeit','Ich möchte einen Termin vereinbaren.','I would like to make an appointment.','Randevu almak istiyorum.','Je voudrais prendre rendez-vous.','Me gustaría pedir una cita.'],
+['arbeit','Können Sie mir bitte eine E-Mail schicken?','Could you please send me an email?','Bana e-posta gönderebilir misiniz?','Pouvez-vous m’envoyer un e-mail, s’il vous plaît ?','¿Puede enviarme un correo electrónico, por favor?'],
+['arbeit','Vielen Dank für Ihre Rückmeldung.','Thank you for your reply.','Yanıtınız için teşekkür ederim.','Merci pour votre réponse.','Gracias por su respuesta.'],
+['gesundheit','Ich brauche einen Arzt.','I need a doctor.','Bir doktora ihtiyacım var.','J’ai besoin d’un médecin.','Necesito un médico.'],
+['gesundheit','Bitte rufen Sie einen Krankenwagen.','Please call an ambulance.','Lütfen ambulans çağırın.','Appelez une ambulance, s’il vous plaît.','Llame a una ambulancia, por favor.'],
+['gesundheit','Ich habe Schmerzen.','I am in pain.','Ağrım var.','J’ai mal.','Tengo dolor.']
+];const langIndexes={de:1,en:2,tr:3,fr:4,es:5};const names={alltag:'Alltag',reise:'Reisen',arbeit:'Arbeit',gesundheit:'Gesundheit'};
+function renderPhrases(){const l=$('languageSelect').value,cat=$('phraseCategory').value,list=$('phraseList');list.replaceChildren();for(const p of phraseData.filter(p=>cat==='all'||p[0]===cat)){const row=document.createElement('div');row.className='phrase';const label=document.createElement('small');label.textContent=names[p[0]]+' · Deutsch: '+p[1];const heading=document.createElement('strong');heading.textContent=p[langIndexes[l]];const footer=document.createElement('footer');const label2=document.createElement('span');label2.textContent=l==='de'?'Deutscher Satz':'Übersetzung / Beispielsatz';const btn=document.createElement('button');btn.className='mini';btn.textContent='📋 Kopieren';btn.addEventListener('click',()=>copy(p[langIndexes[l]]));footer.append(label2,btn);row.append(label,heading,footer);list.append(row)}}$('languageSelect').addEventListener('change',renderPhrases);$('phraseCategory').addEventListener('change',renderPhrases);
+
+// ONEGO 2.0: generation based on user-provided inputs only (no AI or paid API).
+function v(id){return $(id).value.trim().replace(/\s+/g,' ')}
+function buildApplication(){
+  const name=v('appName'), job=v('appJob'), company=v('appCompany'), exp=v('appExperience'), skills=v('appSkills'), available=v('appAvailable');
+  if(!name||!job){notify('Bitte Name und Position ausfüllen');return}
+  const initiativ=$('appMode').value==='initiativ', short=$('appStyle').value==='short';
+  const title=(initiativ?'Initiativbewerbung als ':'Bewerbung als ')+job;
+  const greeting='Sehr geehrte Damen und Herren,';
+  const lead=initiativ
+    ? `ich interessiere mich für eine Tätigkeit als ${job}${company?' bei '+company:''} und möchte mich Ihnen gerne initiativ vorstellen.`
+    : `mit Interesse bewerbe ich mich als ${job}${company?' bei '+company:''}.`;
+  const body=[];
+  if(exp){body.push('Ich bringe folgende Erfahrung mit: '+exp.replace(/[.\s]+$/,'')+'.')}
+  if(skills){body.push('Zu meinen Stärken zählen '+skills.replace(/[.\s]+$/,'')+'.')}
+  if(!body.length){body.push('Gerne stelle ich Ihnen meine Motivation und meine Eignung in einem persönlichen Gespräch vor.')}
+  if(available)body.push('Ich bin '+available+' verfügbar.');
+  const closing=short?'Über eine Rückmeldung freue ich mich.':'Ich freue mich über die Gelegenheit, mich in einem persönlichen Gespräch vorzustellen.';
+  $('appOutput').value=title+'\n\n'+greeting+'\n\n'+lead+'\n\n'+body.join(short?' ':'\n\n')+'\n\n'+closing+'\n\nMit freundlichen Grüßen\n'+name;
+  notify('Anschreiben erstellt ✓');
+}
+$('applicationForm').addEventListener('submit',e=>{e.preventDefault();buildApplication()});
+$('appCopy').addEventListener('click',()=>{let value=$('appOutput').value;if(!value.trim()){notify('Erst Anschreiben erstellen');return}copy(value)});
+function downloadText(filename,mime,content){
+  let blob=new Blob([content],{type:mime}),url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download=filename;document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);
+}
+$('appDownload').addEventListener('click',()=>{const value=$('appOutput').value;if(!value.trim()){notify('Erst Anschreiben erstellen');return}downloadText('ONEGO-Bewerbung.txt','text/plain;charset=utf-8',value)});
+$('appShare').addEventListener('click',async()=>{const t=$('appOutput').value;if(!t.trim()){notify('Erst Anschreiben erstellen');return}if(navigator.share){try{await navigator.share({title:'Bewerbung',text:t})}catch(e){if(e.name!=='AbortError')copy(t)}}else copy(t)});
+$('shareApp').addEventListener('click',async()=>{if(navigator.share){try{await navigator.share({title:'ONEGO – kostenlose Alltagstools',url:location.href})}catch(e){if(e.name!=='AbortError')copy(location.href)}}else copy(location.href)});
+
+let bills=load('bills',[]); // isolated key; v1 budget/tasks data stays untouched
+const billStore=()=>save('bills',bills);
+const isoToday=()=>{const d=new Date(),off=d.getTimezoneOffset()*60000;return new Date(d.getTime()-off).toISOString().slice(0,10)};
+// Past due dates are allowed for overdue bills.
+function icsEscape(s){return String(s).replace(/\\/g,'\\\\').replace(/\n/g,'\\n').replace(/[,;]/g,c=>'\\'+c)}
+function exportBill(b){
+  // Calendar event is all-day and includes a 1-day-prior display reminder where supported.
+  const start=b.date.replaceAll('-','');let d=new Date(b.date+'T12:00:00');d.setDate(d.getDate()+1);
+  const end=[d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('');
+  const info=b.name+(b.amount>0?' – '+euros(b.amount):'');
+  const content=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//ONEGO//Bill Reminder//DE','CALSCALE:GREGORIAN','BEGIN:VEVENT',
+    'UID:onego-'+b.id+'@onego.local','DTSTAMP:'+new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d{3}/,'').replace('Z','Z'),
+    'DTSTART;VALUE=DATE:'+start,'DTEND;VALUE=DATE:'+end,'SUMMARY:'+icsEscape(info),'DESCRIPTION:In ONEGO gespeicherte Frist.',
+    'BEGIN:VALARM','ACTION:DISPLAY','DESCRIPTION:Frist morgen fällig','TRIGGER:-P1D','END:VALARM','END:VEVENT','END:VCALENDAR'].join('\r\n')+'\r\n';
+  downloadText('ONEGO-Kalender-'+b.date+'.ics','text/calendar;charset=utf-8',content);
+  notify('Kalenderdatei gespeichert');
+}
+function renderBills(){
+  const today=isoToday(),open=bills.filter(b=>!b.done),overdue=open.filter(b=>b.date<today);
+  $('homeBills').textContent=open.length;$('billPaid').textContent=bills.length-open.length;
+  $('billOpen').textContent=open.length;$('billOverdue').textContent=overdue.length;
+  const list=$('billList');list.replaceChildren();
+  if(!bills.length){let el=document.createElement('div');el.className='empty';el.textContent='Noch keine Fristen. Trage oben die erste ein.';list.append(el)}
+  for(const b of [...bills].sort((a,c)=>Number(a.done)-Number(c.done)||a.date.localeCompare(c.date))){
+    const row=document.createElement('div');row.className='bill-row'+(b.done?' completed':b.date<today?' overdue':'');
+    const data=document.createElement('div');data.className='bill-data';let name=document.createElement('strong');name.textContent=b.name;
+    let sub=document.createElement('small');sub.textContent=new Date(b.date+'T12:00:00').toLocaleDateString('de-DE')+(b.amount>0?' · '+euros(b.amount):'');
+    data.append(name,sub);if(!b.done&&b.date<today){const over=document.createElement('span');over.className='bill-mark';over.textContent='Überfällig';data.append(over)}
+    const controls=document.createElement('div');controls.className='bill-controls';
+    const change=document.createElement('button');change.className='mini';change.textContent=b.done?'↶ Offen':'✓ Bezahlt';change.addEventListener('click',()=>{b.done=!b.done;billStore();renderBills()});
+    const calendar=document.createElement('button');calendar.className='mini';calendar.textContent='📅 Kalender';calendar.addEventListener('click',()=>exportBill(b));
+    const del=document.createElement('button');del.className='iconbtn';del.textContent='×';del.setAttribute('aria-label','Frist löschen');del.addEventListener('click',()=>{bills=bills.filter(x=>x.id!==b.id);billStore();renderBills()});
+    controls.append(change,calendar,del);row.append(data,controls);list.append(row)
+  }
+}
+$('billForm').addEventListener('submit',e=>{e.preventDefault();const name=v('billName'),date=$('billDate').value,amountRaw=$('billAmount').value;
+  if(!name||!/^\d{4}-\d{2}-\d{2}$/.test(date)){notify('Bitte Titel und Datum eingeben');return}
+  let amount=amountRaw===''?0:Number(amountRaw);if(!Number.isFinite(amount)||amount<0||amount>100000000){notify('Ungültiger Betrag');return}
+  bills.push({id:uid(),name,date,amount:Math.round(amount*100)/100,done:false});billStore();$('billForm').reset();renderBills();notify('Frist gespeichert ✓')});
+$('billClearPaid').addEventListener('click',()=>{const n=bills.filter(b=>b.done).length;if(!n){notify('Keine bezahlten Einträge');return}if(!confirm(n+' bezahlte Einträge wirklich löschen?'))return;bills=bills.filter(b=>!b.done);billStore();renderBills()});
+renderBills();
+
+
+// ONEGO 3.0: printable resume; no server-side processing and no fabricated data.
+let cvText='';let cvReady=false;
+function cvValue(id){return ($(id).value||'').trim()}
+function cvP(parent,cls,content){if(!content)return;const p=document.createElement('p');if(cls)p.className=cls;p.textContent=content;parent.append(p)}
+function cvBlock(parent,label,content){if(!content)return;const wrap=document.createElement('section');wrap.className='cv-block';const heading=document.createElement('h3');heading.textContent=label;const body=document.createElement('p');body.textContent=content;wrap.append(heading,body);parent.append(wrap)}
+function renderCV(){
+ const val={name:cvValue('cvName'),title:cvValue('cvTitleInput'),email:cvValue('cvEmail'),phone:cvValue('cvPhone'),city:cvValue('cvCity'),profile:cvValue('cvProfile'),experience:cvValue('cvExperience'),education:cvValue('cvEducation'),skills:cvValue('cvSkills'),languages:cvValue('cvLanguages')};
+ if(!val.name){notify('Bitte Namen eingeben');return}
+ const contact=[val.city,val.phone,val.email].filter(Boolean).join(' · ');
+ cvText=[val.name,val.title,contact,val.profile?'PROFIL\n'+val.profile:'',val.experience?'BERUFSERFAHRUNG\n'+val.experience:'',val.education?'AUSBILDUNG\n'+val.education:'',val.skills?'KENNTNISSE & STÄRKEN\n'+val.skills:'',val.languages?'SPRACHEN\n'+val.languages:''].filter(Boolean).join('\n\n');
+ for(const id of ['cvPreview','cvPrintable']){
+  const target=$(id);target.replaceChildren();const h=document.createElement(id==='cvPrintable'?'h1':'h2');h.textContent=val.name;target.append(h);
+  if(val.title)cvP(target,'cv-position',val.title);if(contact)cvP(target,'cv-contact',contact);
+  cvBlock(target,'Profil',val.profile);cvBlock(target,'Berufserfahrung',val.experience);cvBlock(target,'Ausbildung',val.education);cvBlock(target,'Kenntnisse & Stärken',val.skills);cvBlock(target,'Sprachen',val.languages);
+ }
+ cvReady=true;notify('Lebenslauf erstellt ✓');
+}
+$('cvForm').addEventListener('submit',event=>{event.preventDefault();renderCV()});
+$('cvCopy').addEventListener('click',()=>cvReady?copy(cvText):notify('Erst Lebenslauf erstellen'));
+$('cvPrint').addEventListener('click',()=>{if(!cvReady){notify('Erst Lebenslauf erstellen');return}window.print()});
+// ONEGO 4.0 Premium: Stripe session verification is done on the SERVER.
+const premiumEndpoint='/.netlify/functions/premium';
+const cfg=window.ONEGO_CONFIG||{};
+const premiumPaymentLink=typeof cfg.premiumPaymentLink==='string'?cfg.premiumPaymentLink.trim():'';
+const premiumSalesEnabled=cfg.premiumSalesEnabled===true;
+let premiumToken='';
+try{premiumToken=localStorage.getItem('onego_premium_session')||''}catch(e){}
+let premiumActive=false,backendReady=false;
+async function premiumCall(action,extra={}){
+ const res=await fetch(premiumEndpoint,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({action,sessionId:premiumToken,...extra}),cache:'no-store',credentials:'same-origin'});
+ let data={};try{data=await res.json()}catch{}
+ if(!res.ok)throw new Error(data.error||'Premium-Dienst momentan nicht verfügbar');
+ return data;
+}
+function showPremiumState(message,active){premiumActive=active;$('premiumState').textContent=message;$('premiumTools').hidden=!active;}
+async function checkPremium(){
+ showPremiumState('⌛ Status wird geprüft …',false);
+ try{
+  const ready=await premiumCall('ready');backendReady=Boolean(ready.ready);
+  if(!backendReady){showPremiumState('🔒 Premium ist noch nicht aktiviert. Die kostenlosen ONEGO-Funktionen stehen weiterhin bereit.',false);return}
+  if(premiumToken){const status=await premiumCall('status');if(status.active){showPremiumState('✅ Dein ONEGO Premium ist aktiv. Die Extra-Funktionen sind freigeschaltet.',true);return}}
+  showPremiumState('🔒 Keine aktive Premium-Mitgliedschaft auf diesem Gerät gefunden.',false);
+ }catch(e){backendReady=false;showPremiumState('🔧 Premium wird vorbereitet. Es werden noch keine Premium-Zahlungen angenommen.',false)}
+ finally{
+  const validLink=/^https:\/\/buy\.stripe\.com\/[A-Za-z0-9_]+(?:\?.*)?$/.test(premiumPaymentLink);
+  const enabled=backendReady&&premiumSalesEnabled&&validLink;
+  $('premiumSubscribe').hidden=!enabled;
+  if(enabled)$('premiumSubscribe').href=premiumPaymentLink;
+  if(!enabled&&backendReady&&!premiumActive)$('premiumState').textContent='🔧 Premium ist vorbereitet. Der Verkauf wird erst nach Abschluss der rechtlichen und Stripe-Einrichtung freigegeben.';
+ }
+}
+// Stripe replaces {CHECKOUT_SESSION_ID} in its return URL after Checkout.
+const successParams=new URLSearchParams(location.search);const stripeReturn=successParams.get('session_id');
+if(stripeReturn&&/^cs_(?:test_|live_)[A-Za-z0-9]{12,250}$/.test(stripeReturn)){
+ premiumToken=stripeReturn;
+ try{localStorage.setItem('onego_premium_session',premiumToken)}catch(e){}
+ history.replaceState({},document.title,location.pathname+location.hash);
+ go('premium');
+}
+$('premiumRetry').addEventListener('click',checkPremium);
+$('premiumRestore').addEventListener('click',()=>{
+ const newId=$('premiumRecovery').value.trim();
+ if(!/^cs_(?:test_|live_)[A-Za-z0-9]{12,250}$/.test(newId)){notify('Ungültige Checkout-Sitzungs-ID');return}
+ premiumToken=newId;try{localStorage.setItem('onego_premium_session',newId)}catch(e){}
+ $('premiumRecovery').value='';checkPremium();
+});
+$('premiumForget').addEventListener('click',()=>{if(!confirm('Premium-Zugang von diesem Gerät entfernen? Das Abo selbst läuft weiter.'))return;premiumToken='';try{localStorage.removeItem('onego_premium_session')}catch(e){}checkPremium()});
+async function callPremiumAction(action,data,callback){
+ if(!premiumActive){notify('Premium-Abo erforderlich');return}
+ try{const value=await premiumCall(action,data);callback(value);notify('Fertig ✓')}
+ catch(e){notify(e.message||'Fehler');if(/nicht aktiv|ungültig/i.test(e.message))checkPremium()}
+}
+$('proImport').addEventListener('click',()=>{
+ for(const [from,to] of [['appName','proName'],['appJob','proJob'],['appCompany','proCompany'],['appExperience','proExperience'],['appSkills','proSkills'],['appAvailable','proAvailability']])$(to).value=$(from).value;
+ notify('Angaben übernommen ✓');
+});
+$('proAppForm').addEventListener('submit',e=>{e.preventDefault();const input={name:$('proName').value,job:$('proJob').value,company:$('proCompany').value,experience:$('proExperience').value,skills:$('proSkills').value,availability:$('proAvailability').value,style:$('proStyle').value};callPremiumAction('bewerbung',{input},d=>{$('proResult').value=d.result})});
+$('proCopy').addEventListener('click',()=>$('proResult').value.trim()?copy($('proResult').value):notify('Erst Text erstellen'));
+$('proDownload').addEventListener('click',()=>$('proResult').value.trim()?downloadText('ONEGO-Premium-Anschreiben.txt','text/plain;charset=utf-8',$('proResult').value):notify('Erst Text erstellen'));
+$('proCSV').addEventListener('click',()=>{if(!entries.length){notify('Noch keine Budgeteinträge');return}callPremiumAction('budget_csv',{records:entries},d=>downloadText(d.filename,d.mime,d.content))});
+$('proCalendar').addEventListener('click',()=>{const open=bills.filter(x=>!x.done);if(!open.length){notify('Keine offenen Fristen');return}callPremiumAction('fristen_ics',{records:open},d=>downloadText(d.filename,d.mime,d.content))});
+// Voluntary support is NOT a subscription.
+const paymentLink=(typeof cfg.supportLink==='string')?cfg.supportLink.trim():'';
+if(/^https:\/\/buy\.stripe\.com\/[a-zA-Z0-9_]+(?:\?.*)?$/.test(paymentLink)){
+ const link=$('supportLink');link.href=paymentLink;link.hidden=false;$('supportStatus').textContent='✓ Die externe Zahlungsseite ist eingerichtet. Unterstützung ist freiwillig.';
+}
+checkPremium();
+
+renderPhrases();renderBudget();renderTasks();updateHome();
+})();
+</script>
+<script>
+if ('serviceWorker' in navigator && location.protocol === 'https:') {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').catch(() => {});
+  });
+}
+</script>
+</body></html>
